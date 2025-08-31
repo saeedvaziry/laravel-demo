@@ -35,6 +35,10 @@ return [
             'hostname' => env('REVERB_HOST'),
             'options' => [
                 'tls' => [],
+                'host' => env('REVERB_HOST'),
+                'port' => env('REVERB_PORT', 443),
+                'scheme' => env('REVERB_SCHEME', 'https'),
+                'path' => env('REVERB_SERVER_PATH', ''), // 👈 critical
             ],
             'max_request_size' => env('REVERB_MAX_REQUEST_SIZE', 10_000),
             'scaling' => [
